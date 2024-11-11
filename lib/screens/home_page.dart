@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
     String latitude = currentPosition!.latitude.toString();
     String longitude = currentPosition!.longitude.toString();
     final response = await dio.get(
-        "https://api.tomorrow.io/v4/weather/forecast?location=$latitude, $longitude&apikey=WchXPfNe3B3phW9kxDgATzKrWzI5HqOf");
+        "https://api.tomorrow.io/v4/weather/forecast?location=$latitude, $longitude&apikey=your-api-key");
 
     if (response.statusCode == 200) {
       weatherResponseModel = WeatherResponseModel.fromJson(response.data);
